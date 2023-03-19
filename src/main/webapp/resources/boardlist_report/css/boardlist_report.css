@@ -1,0 +1,139 @@
+.container_section {
+	background-color: white;
+	width: 100vw;
+	height: 100vh;
+}
+
+.wrapper {
+	display: flex;
+	align-items: center;
+	background-color: white;
+	height: 700px;
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+}
+
+#wrapper_inner {
+	width: 1200px;
+	min-height: 100%;
+	position: absolute;
+	top: 20%;
+	background-color: white;
+}
+
+#reporttable {
+	float: left;
+	/* text-align: left; */
+	background-color: white;
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+#reporttable tr {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background-color: white;
+}
+
+/* 전체적인 표의 크기랑 화면 사이즈 고정  */
+div {
+	width: 700px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+/* 전체적인 표의 속성  */
+.rwd-table {
+	margin: auto;
+	width: 95%;
+	border-collapse: collapse;
+	color: #333;
+	border-radius: .4em;
+	overflow: hidden;
+	table-layout: fixed;
+	font-size: 15px;
+}
+
+/* 표 헤더 속성  */
+.rwd-table tr:first-child {
+	background-color: rgb(36, 61, 91);
+	color: #fff;
+	text-align: center;
+}
+
+/* 표 헤더 제외 표 속성 */
+.rwd-table tr {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	background-color: white;
+	border-color: rgb(36, 61, 91);
+}
+
+/* 표에서 글자수 많으면 ... 효과  */
+.rwd-table td {
+	display: block;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.rwd-table td:first-child {
+	margin-top: .5em;
+}
+
+.rwd-table td:last-child {
+	margin-bottom: .5em;
+}
+
+.rwd-table th, .rwd-table td {
+	text-align: center;
+	padding: .5em 1em;
+}
+
+@media screen and (max-width: 601px) {
+	.rwd-table tr:nth-child(2) {
+		border-top: none;
+	}
+	.rwd-table th:first-child, .rwd-table td:first-child {
+		font-weight: bold;
+		color: black;
+	}
+	.rwd-table td a {
+		text-decoration: none;
+		color: black;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.rwd-table tr:hover:not(:first-child) {
+		background-color: rgba(131, 244, 180, 0.3);
+	}
+	.rwd-table td:before {
+		display: none;
+	}
+	.rwd-table td a {
+		text-decoration: none;
+		color: black;
+	}
+	.rwd-table th, .rwd-table td {
+		display: table-cell;
+		padding: .25em .5em;
+	}
+	.rwd-table th:first-child, .rwd-table td:first-child {
+		font-weight: bold;
+		padding-left: 0;
+	}
+	.rwd-table th:last-child, .rwd-table td:last-child {
+		padding-right: 0;
+	}
+	.rwd-table th, .rwd-table td {
+		padding: 1em !important;
+	}
+}
+
+/* 프레임 8px여백 없애기 위함  */
+body {
+	margin: 0;
+}
